@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #fdf2f8;
+    color: #1f2937;
+    overflow: hidden;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  .font-display {
+    font-family: 'ZCOOL KuaiLe', 'Noto Sans SC', sans-serif;
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-28px) scale(1.05);
+  }
+}
+
+@keyframes walk-bob {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.animate-float-up {
+  animation: float-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-walk-bob {
+  animation: walk-bob 0.35s ease-in-out infinite;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
